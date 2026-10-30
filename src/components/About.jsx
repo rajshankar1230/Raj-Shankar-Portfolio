@@ -6,7 +6,7 @@ import { motion, useAnimation, useInView } from "framer-motion"
 import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { fadeIn } from "../utils/motion"
-import { resume, profilepic } from "../assets"
+import { profilepic } from "../assets"
 
 const ServiceCard = ({ index, title, icon }) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="w-full xs:w-[250px]">
@@ -80,7 +80,7 @@ const About = () => {
             <div className="w-full h-full overflow-hidden">
               <img
                 src={profilepic || "/placeholder.svg"}
-                alt="Sunny Patel"
+                alt="Raj Shankar"
                 className="w-full h-full object-cover"
                 style={{
                   objectFit: "cover",
@@ -91,19 +91,10 @@ const About = () => {
           </div>
           <div className="mt-10 flex flex-wrap gap-5 justify-center">
             <motion.button
-              className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.open(resume, "_blank")}
-            >
-              Resume
-            </motion.button>
-
-            <motion.button
               className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open("https://www.linkedin.com/in/sunny-patel-30b460204/", "_blank")}
+              onClick={() => window.open("https://www.linkedin.com/in/raj-shankar-1ba958248/", "_blank")}
             >
               LinkedIn
             </motion.button>
@@ -112,9 +103,36 @@ const About = () => {
               className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-gray-600 to-gray-800 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open("https://github.com/sunnypatell", "_blank")}
+              onClick={() => window.open("https://github.com/rajshankar1230", "_blank")}
             >
               GitHub
+            </motion.button>
+
+            <motion.button
+              className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-gray-500 to-gray-700 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open("https://x.com/shan77797996", "_blank", "noopener,noreferrer")}
+            >
+              Twitter / X
+            </motion.button>
+
+            <motion.button
+              className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-pink-500 to-purple-600 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open("https://www.instagram.com/rajshankar_05?srtk=aGprd3Zrc2xkaTM0", "_blank", "noopener,noreferrer")}
+            >
+              Instagram
+            </motion.button>
+
+            <motion.button
+              className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-700 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open("https://t.me/+Ve7xvy5KNXphNDdl", "_blank", "noopener,noreferrer")}
+            >
+              Telegram
             </motion.button>
           </div>
         </motion.div>
@@ -127,15 +145,14 @@ const About = () => {
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.1, 0.75)}>
               <span className="mr-4 text-2xl flex-shrink-0">👨‍💻</span>
               <span>
-                I&apos;m a Software Engineer with over 4 years of experience in software development and cloud
+                I&apos;m a Software Engineer with over 2 years of experience in software development and cloud
                 technologies.
               </span>
             </motion.li>
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.2, 0.75)}>
               <span className="mr-4 text-2xl flex-shrink-0">🎓</span>
               <span>
-                Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University,
-                I&apos;m all about building reliable, scalable software that makes a difference.
+               Currently an undergraduate engineering student passionate about full-stack web development and scalable architectures. I love crafting interactive user experiences and building robust backend systems that solve real-world problems.
               </span>
             </motion.li>
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.3, 0.75)}>

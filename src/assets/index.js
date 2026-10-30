@@ -1,5 +1,6 @@
 import profilepic from './pfp.png';
-
+import bvcoe from "./company/bvcoe.png";
+import srSchool from "./company/srSchool.png";
 import logo from "./logo0.png";
 import backend from "./backend.png";
 import mobile from "./mobile.png";
@@ -97,8 +98,8 @@ export {
   postgresql,
   mongodb,
   aws,
-  otu,
-  rhhs,
+  bvcoe,
+  srSchool,
   wonderland,
   mackenziehealth,
   privcurity,

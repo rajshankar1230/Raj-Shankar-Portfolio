@@ -13,6 +13,7 @@ import Experience from "./Experience";
 import Extracurricular from "./Extracurricular";
 import Works from "./Works";
 import Contact from "./Contact";
+import LeetCode from "./LeetCode";
 import CanvasLoader from "./Loader";
 
 export {
@@ -25,6 +26,7 @@ export {
   Extracurricular,
   Works,
   Contact,
+  LeetCode,
   CanvasLoader,
   EarthCanvas,
   BallCanvas,

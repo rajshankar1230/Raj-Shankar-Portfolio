@@ -92,10 +92,11 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Sunny Patel",
+          to_name: "Raj Shankar",
           from_email: form.email,
-          to_email: "sunnypatel124555@gmail.com",
+          to_email: "shankarraj00772002@gmail.com",
           message: form.message,
+          "g-recaptcha-response": captchaToken,
         },
         import.meta.env.VITE_EMAIL_JS_ACCESS_TOKEN,
       )
@@ -110,7 +111,7 @@ const Contact = () => {
           })
           setShowConfetti(true)
           setCaptchaToken(null)
-          captchaRef.current.reset()
+          captchaRef.current?.reset()
           setTimeout(() => {
             setSuccess(false)
             setShowConfetti(false)
@@ -150,11 +151,11 @@ const Contact = () => {
         <div className="flex justify-between items-center mb-4">
           <p className={styles.sectionSubText}>Get in touch</p>
           <a
-            href="tel:+14372161611"
+            href="tel:+917543015768"
             className="text-purple-400 hover:text-purple-300 transition-all duration-300 flex items-center gap-2 hover:gap-3 group"
           >
             <FontAwesomeIcon icon={faPhone} className="group-hover:rotate-12 transition-transform duration-300" />
-            <span className="font-medium">(437) 216-1611</span>
+            <span className="font-medium">(+91) 7543015768</span>
           </a>
         </div>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -204,7 +205,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Hey Sunny, love the website! I'd like to chat about some opportunities you might like! 🎉"
+              placeholder="Hey Raj, love the website! I'd like to chat about some opportunities you might like! 🎉"
               className="bg-black-100/50 backdrop-blur-sm py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none border-2 border-white/20 font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 focus:bg-black-100/70 hover:border-white/30 resize-none"
             />
           </label>
@@ -212,14 +213,14 @@ const Contact = () => {
           <div className="flex justify-center">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <ReCAPTCHA
-                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || ""}
                 onChange={(token) => setCaptchaToken(token)}
                 theme="dark"
                 ref={captchaRef}
               />
             </div>
           </div>
-          <span className="text-xs text-gray-400 text-center -mt-4">Protected by reCAPTCHA Enterprise. ⚔️</span>
+          <span className="text-xs text-gray-400 text-center -mt-4">Protected by reCAPTCHA v2. ⚔️</span>
 
           <button
             type="submit"

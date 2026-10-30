@@ -228,6 +228,35 @@ const Tech = () => {
         {renderCategory("programming", rows.programming)}
         {renderCategory("itTools", rows.itTools)}
         {renderCategory("contentProduction", rows.contentProduction)}
+
+        <motion.div
+          variants={textVariant()}
+          className="mt-10 rounded-2xl border border-white/10 bg-tertiary p-6 sm:p-8"
+        >
+          <h3 className="text-white text-[22px] font-bold mb-3">System Design</h3>
+          <p className="text-secondary text-[16px] leading-7 mb-5">
+            Familiar with designing maintainable and scalable applications, from defining API contracts
+            and data models to thinking through performance, reliability, and system architecture.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {[
+              "System Architecture",
+              "API Design",
+              "Database Design",
+              "Scalability",
+              "Caching",
+              "Distributed Systems",
+              "Reliability & Performance",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-4 py-2 text-sm font-medium text-white"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
